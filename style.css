@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.header h2{
+    color: #3fefef;
+    filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 0 60px #3fefef); 
+}
+
+
+
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+}
+.main .scan{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .scan .fingerprint{
+    position: relative;
+    width: 300px;
+    height: 380px;
+    background:url('./Img/fingerPrint_01.png');
+    background-size: 300px;
+}
+.main .scan .fingerprint::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./Img/fingerPrint_02.png');
+    background-size: 300px; 
+    animation:shereyase1 4s ease-in-out infinite;
+}
+
+@keyframes shereyase1{
+    0%,100%{height: 0%;}
+    50%{height: 100%;}
+}
+
+.main .scan .fingerprint::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: #3fefef;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 0 60px #3fefef);
+    animation:shereyase2 4s ease-in-out infinite;
+}
+
+@keyframes shereyase2{
+    0%,100%{top: 0%;}
+    50%{top: 100%;}
+}
+
+.main .scan h3{
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    color: #3fefef;
+    filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 0 60px #3fefef); 
+    animation: shereyase3 0.5s steps(1) infinite;
+}
+
+@keyframes shereyase3{
+    0%,100%{opacity: 0;}
+    50%{opacity: 1;}
+}
